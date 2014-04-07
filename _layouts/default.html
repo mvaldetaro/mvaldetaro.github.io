@@ -1,0 +1,20 @@
+{% include head.html %}
+<div class="warp">
+  <!-- sidebar -->
+  {% include sidebar.html %}
+  <!-- /sidebar -->
+  <!-- content -->
+  <div class="container">
+  <div class="infinite-spinner">
+        <div class="loader"></div>
+      </div>
+  {% include header.html %}
+    <section id="content" class="recent-posts">
+      {% for post in site.posts limit:10 %}
+      {% include post_detail.html %}
+      {% endfor %}
+    </section>
+  </div>
+  <!-- /content -->
+</div>
+{% include footer.html %}

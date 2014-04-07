@@ -1,0 +1,18 @@
+#server
+auto:      true
+server:    true
+
+#Links
+permalink: /blog/:title
+url:       http://mvaldetaro.github.io
+
+# Encode
+encoding: UTF-8
+
+# GitHub Defaults
+lsi: false
+pygments: true
+safe: true
+
+# UTF-8 & parse errors fix
+markdown: redcarpet
