@@ -12,9 +12,10 @@
     <section id="content" class="post">
       <article class="entry-content">
         <span class="data">{{ page.date | date_to_string }}</span>
+        {{ page.title }}
         {{ content }}
       </article>
-      {{ % if page.comments % }}
+      {{ % if page.comments = true % }}
         <div id="disqus_thread"></div>
         <script type="text/javascript">
             var disqus_shortname = 'magnovaldetaro';
