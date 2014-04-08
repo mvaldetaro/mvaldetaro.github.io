@@ -1,0 +1,30 @@
+---
+layout: nil
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <id>http://mvaldetaro.github.io/</id>
+  <title>Magno Valdetaro</title>
+  <icon>http://mvaldetaro.github.io/favicon.ico</icon>
+  <updated>{{ site.time | date_to_xmlschema }}</updated>
+  <link href="http://mvaldetaro.github.io/feed/index.xml" rel="self" />
+  <link href="http://mvaldetaro.github.io/" />
+
+  {% for post in site.posts limit:10 %}
+  <entry>
+    <id>http://mvaldetaro.github.io{{ post.id }}/</id>
+    <title>{{ post.title | strip_html }}</title>
+    <updated>{{ post.date | date_to_xmlschema }}</updated>
+    <link href="http://mvaldetaro.github.io{{ post.url }}" />
+    <author>
+      <name>Magno Valdetaro</name>
+      <uri>http://mvaldetaro.github.io/</uri>
+    </author>
+    <content type="html">
+      {{ post.content | replace: "src='/assets/images/", "src='http://mvaldetaro.github.io/assets/images/" | xml_escape }}
+    </content>
+  </entry>
+  {% endfor %}
+
+</feed>
