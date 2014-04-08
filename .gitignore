@@ -1,5 +1,5 @@
 *.swp
-.Thumbs.db
+*.db
 _site/
 _drafts/
 node_modules/
