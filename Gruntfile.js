@@ -3,16 +3,16 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     recess: {
-    dist: {
+      dist: {
         options: {
-            compile: true,
-            compress: true
+          compile: true,
+          compress: true
         },
         files: {
-            'assets/css/main.min.css': ['assets/less/main.less']
+          'assets/css/main.min.css': ['assets/less/main.less']
         }
+      }
     }
-}
   });
 
   // Load the plugin
@@ -20,5 +20,4 @@ module.exports = function(grunt) {
 
   // Default task(s).
   grunt.registerTask('default', ['recess']);
-
 };
