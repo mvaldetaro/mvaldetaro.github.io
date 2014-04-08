@@ -6,15 +6,15 @@
     <!-- Meta -->
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="description" content="{{page.description}}" />
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
 
     <!-- Facebook -->
-    <meta property="og:title" content="Magno Valdetaro"/>
+    <meta property="og:title" content="{% if page.title %}{{ page.title }} &mdash;{% endif %} {{ site.name }}"/>
     <meta property="og:site_name" content="Magno Valdetaro"/>
     <meta property="og:url" content="{{site.url}}{{page.url}}"/>
-    <meta property="og:image" content="{{site.url}}/assets/img/fb-avatar.jpg"/>
-    <meta property="og:type" content="blog"/>
-    <meta property="og:description" content="{{page.description}}"/>
+    <meta property="og:image" content="{{site.url}}/assets/images/avatar-magno-valdetaro.jpg"/>
+    <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}blog{% endif %}"/>
+    <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}"/>
 
     <!-- Twitter Analytics -->
     <meta property="twitter:account_id" content="15278873" />
