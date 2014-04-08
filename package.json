@@ -1,0 +1,22 @@
+{
+  "name": "mvaldetaro",
+  "version": "1.0.0",
+  "description": "Blog Pessoal",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mvaldetaro/mvaldetaro.github.io.git"
+  },
+  "keywords": [
+    "blog",
+    "jekyll",
+    "flat"
+  ],
+  "author": "Magno Valdetaro",
+  "bugs": {
+    "url": "https://github.com/mvaldetaro/mvaldetaro.github.io/issues"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.4",
+    "grunt-recess": "~0.6.1"
+  }
+}
