@@ -25,6 +25,12 @@ body {
   }
 }
 
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .infinite-spinner { position: relative; }
 
 // Sidebar
@@ -104,8 +110,8 @@ body {
 }
 
 .sideShow {
-  left:0px;
-  transition: left 0.4s ease 0.1s;
+  left:0px !important;
+  transition: left 0.4s ease 0.1s !important;
 }
 
 // Recent Posts
@@ -149,10 +155,12 @@ body {
     font-size: 14px;
     display: inline-block;
     border-radius: 4px;
-    border: solid 1px @asphalt;
+    border: solid 1px @linksover;
     padding: 5px 14px;
     &:hover {
-      border: solid 1px @linksover;
+      border: solid 1px transparent;
+      color: @white;
+      background: @linksover;
       text-decoration: none;
     }
   }
@@ -189,46 +197,7 @@ body {
     }
   }
 
-}
-
-@media (min-width : @mm-screen) {
-
-  .entry-content {
-    p {
-      line-height:26px;
-    }
-  }
-
-  .sideShow {
-    left:0px;
-    transition: left 0.4s ease 0.1s;
-  }
-
   .sideHide {
-    left:-@side-l;
-    transition: left 0.4s ease 0.1s;
-  }
-
-  .sidebar {
-    width: @side-l;
-    .menuToggle {
-      left: @side-l;
-    }
-    .menuToggle.inside {
-      left: @side-l - @tooglesize;
-    }
-  }
-
-}
-
-@media (min-width : @xx-screen) {
-
-  .sideShow {
-    left:0px;
-    transition: left 0.4s ease 0.1s;
-  }
-
- .sideHide {
     left:-@side-xl;
     transition: left 0.4s ease 0.1s;
   }
@@ -242,6 +211,22 @@ body {
       left: @side-xl - @tooglesize;
     }
   }
+
+}
+
+@media (min-width : @mm-screen) {
+
+  .entry-content {
+    p {
+      line-height:26px;
+    }
+  }
+
+}
+
+@media (min-width : @xx-screen) {
+
+
 }
 
 @media (min-width : @xl-screen) {
