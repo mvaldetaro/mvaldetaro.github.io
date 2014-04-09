@@ -36,6 +36,11 @@ body {
 // Sidebar
 // =====================================================================
 
+.sideShow {
+  left:0px !important;
+  transition: left 0.4s ease 0.1s !important;
+}
+
 .sidebar {
   width: @side-m;
   height: 100%;
@@ -43,6 +48,7 @@ body {
   position: fixed;
   z-index: 999;
   top: 0;
+  left:-@side-m;
   transition: left 0.4s ease 0.1s;
   h1 {
     margin: 15px 0 0 0;
@@ -102,16 +108,6 @@ body {
       b { display: none; }
     }
   }
-}
-
-.sideHide {
-  left:-@side-m;
-  transition: left 0.4s ease 0.1s;
-}
-
-.sideShow {
-  left:0px !important;
-  transition: left 0.4s ease 0.1s !important;
 }
 
 // Recent Posts
@@ -188,6 +184,12 @@ body {
   }
 
 }
+@media (max-width: @xs-screen) {
+
+.mobile {
+    margin-left: @tooglesize+10;
+  }
+}
 
 @media (min-width : @sm-screen) {
 
@@ -197,13 +199,9 @@ body {
     }
   }
 
-  .sideHide {
-    left:-@side-xl;
-    transition: left 0.4s ease 0.1s;
-  }
-
   .sidebar {
     width: @side-xl;
+    left:-@side-xl;
     .menuToggle {
       left: @side-xl;
     }
