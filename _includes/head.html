@@ -8,6 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
 
+    <!-- Font -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/main.min.css" type="text/css" />
+
     <!-- Facebook -->
     <meta property="og:title" content="{% if page.title %}{{ page.title }} &mdash;{% endif %} {{ site.name }}"/>
     <meta property="og:site_name" content="Magno Valdetaro"/>
@@ -21,8 +26,7 @@
 
     <!-- FaviconS -->
     <link rel="shortcut icon" href="{{ site.url }}/favicon.ico" type="image/x-icon" />
-    <meta name="msapplication-TileImage" content="{{ site.url }}/mstile-144x144.png"/>
-    <meta name="msapplication-TileColor" content="#2ecc71"/>
+
     <link rel="apple-touch-icon" sizes="57x57" href="{{ site.url }}/apple-touch-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="114x114" href="{{ site.url }}/apple-touch-icon-114x114.png">
     <link rel="apple-touch-icon" sizes="72x72" href="{{ site.url }}/apple-touch-icon-72x72.png">
@@ -32,23 +36,21 @@
     <link rel="apple-touch-icon" sizes="76x76" href="{{ site.url }}/apple-touch-icon-76x76.png">
     <link rel="apple-touch-icon" sizes="152x152" href="{{ site.url }}/apple-touch-icon-152x152.png">
 
-    <!-- Font -->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+    <meta name="msapplication-config" content="{{ site.url }}/browserconfig.xml" />
+    <meta name="msapplication-TileImage" content="{{ site.url }}/mstile-144x144.png"/>
+    <meta name="msapplication-TileColor" content="#2ecc71"/>
 
     <!-- Feed -->
     <link rel="alternate" type="application/rss+xml" href="http://feeds.feedburner.com/mvaldetaro">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="/assets/css/main.min.css" type="text/css" />
-
     <!-- jQuery -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
-    <!-- Prefixfree -->
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
-
     <!-- Modernizr -->
     <script src='http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js'></script>
+
+    <!-- Prefixfree -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 
   </head>
 
