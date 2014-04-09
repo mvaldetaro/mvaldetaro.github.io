@@ -4,6 +4,7 @@ description: Apenas um jovem rapaz brincando de codificar.
 #server
 auto:      true
 server:    true
+include: ['.htaccess']
 
 #Links
 permalink: /blog/:title
