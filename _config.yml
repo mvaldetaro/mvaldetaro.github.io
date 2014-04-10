@@ -1,9 +1,6 @@
 name: Magno Valdetaro
 description: Apenas um jovem rapaz brincando de codificar.
 
-#server
-auto:      true
-server:    true
 include: ['.htaccess']
 
 #Links
@@ -22,4 +19,4 @@ safe: true
 markdown: redcarpet
 
 #ignore
-exclude: ['node_modules', 'package.json']
+exclude: ['Thumbs.db', 'node_modules', 'package.json']

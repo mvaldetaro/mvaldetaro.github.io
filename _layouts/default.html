@@ -3,17 +3,19 @@
   <!-- sidebar -->
   {% include sidebar.html %}
   <!-- /sidebar -->
+  {% include header.html %}
   <!-- content -->
   <div class="container">
-  <div class="infinite-spinner">
-        <div class="loader"></div>
+      <div class="col-1-4">
+        <img src="/assets/images/logo.png" alt="Magno Valdetaro">
       </div>
-  {% include header.html %}
-    <section id="content" class="recent-posts">
-      {% for post in site.posts limit:10 %}
-      {% include post_detail.html %}
-      {% endfor %}
-    </section>
+      <div class="col-3-4">
+        <section id="content" class="recent-posts">
+          {% for post in site.posts limit:10 %}
+          {% include post_detail.html %}
+          {% endfor %}
+        </section>
+      </div>
   </div>
   <!-- /content -->
 </div>
