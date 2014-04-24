@@ -1,21 +1,21 @@
 {% include head.html %}
 <div class="warp">
-  <!-- sidebar -->
-  {% include sidebar.html %}
-  <!-- /sidebar -->
+  <!-- menu -->
+  {% include menu.html %}
+  <!-- /menu -->
   {% include header.html %}
   <!-- content -->
-  <div class="container">
-      <div class="col-1-4">
-        <img src="/assets/images/logo.png" alt="Magno Valdetaro">
-      </div>
-      <div class="col-3-4">
-        <section id="content" class="recent-posts">
-          {% for post in site.posts limit:10 %}
-          {% include post_detail.html %}
-          {% endfor %}
-        </section>
-      </div>
+  <div class="container fix-bar">
+    <!-- sidebar -->
+    {% include sidebar.html %}
+    <!-- /sidebar -->
+    <div class="col-3-4">
+      <section id="content" class="recent-posts">
+        {% for post in site.posts limit:10 %}
+        {% include post_detail.html %}
+        {% endfor %}
+      </section>
+    </div>
   </div>
   <!-- /content -->
 </div>

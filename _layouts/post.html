@@ -1,33 +1,35 @@
 {% include head.html %}
 <div class="warp">
-  <!-- sidebar -->
-  {% include sidebar.html %}
-  <!-- /sidebar -->
-  <!-- content -->
-  <div class="container">
-  <div class="infinite-spinner">
-    <div class="loader"></div>
-  </div>
+  <!-- menu -->
+  {% include menu.html %}
+  <!-- /menu -->
   {% include header.html %}
-    <section id="content" class="post">
-      <article class="entry-content">
-        <span class="data">{{ page.date | date_to_string }}</span>
-        <h1 class="title">{{ page.title }}</h1>
-        {{ content }}
-      </article>
-      {{ % if page.comments % }}
-        <div id="disqus_thread"></div>
-        <script type="text/javascript">
+  <!-- content -->
+  <div class="container fix-bar">
+    <!-- sidebar -->
+    {% include sidebar.html %}
+    <!-- /sidebar -->
+    <div class="col-3-4">
+      <section id="content" class="post">
+        <article class="entry-content">
+          <span class="data">{{ page.date | date_to_string }}</span>
+          <h1 class="title">{{ page.title }}</h1>
+          {{ content }}
+        </article>
+        {{ % if page.comments % }}
+          <div id="disqus_thread"></div>
+          <script type="text/javascript">
             var disqus_shortname = 'magnovaldetaro',
                 disqus_url = 'http://mvaldetaro.github.io/{{ page.url }}';
             (function() {
-                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
             })();
-        </script>
-      {{ % endif % }}
-    </section>
+          </script>
+        {{ % endif % }}
+      </section>
+    </div>
   </div>
   <!-- /content -->
 </div>
