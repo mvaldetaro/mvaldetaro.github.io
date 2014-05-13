@@ -1,5 +1,11 @@
 *.swp
+
 *.db
+*.sublime-project
+
+*.sublime-workspace
 _site/
+
 _drafts/
+
 node_modules/
